@@ -13,4 +13,6 @@ class Actor < ApplicationRecord
   #           order(id: :asc)
   #         end
   #       }
+
+  belongs_to :movie
 end
