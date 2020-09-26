@@ -14,4 +14,6 @@ class Movie < ApplicationRecord
   # scope :english, ->(check_language) { where("english = ?", "true") if check_language }
 
   has_many :actors
+  has_many :movie_genres
+  has_many :genres, through: :movie_genres
 end
