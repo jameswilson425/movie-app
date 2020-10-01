@@ -1,0 +1,23 @@
+<h1>Welcome to my movie page!</h1><br>
+<img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Reel">
+
+<p>Below you will find some info about some the best films in cinematic history!</p>
+
+<% @movies.each do |movie| %>
+<h6>Title: <%= movie.title %></h6>
+<h6>Year: <%= movie.year %></h6>
+<h6>Director: <%= movie.director %></h6>
+<h6>Plot: <%= movie.plot %></h6>
+<% end %>
+
+<h3>What's your favorite film?</h3>
+<h4>Let me know what movie you consider to be awesome:</h4>
+
+<form action="/thanks">
+  <label for="title">Movie:</label><br>
+  <input type="text" id="title" name="title" value=""><br>
+  <label for="why">Why is it your favorite?:</label><br>
+  <input type="text" id="why" name="why" value=""><br><br>
+  <input type="submit" value="Submit">
+</form> 
+

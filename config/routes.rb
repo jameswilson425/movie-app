@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "/movies" => "movies#show"
+  get "/thanks" => "movies#page"
   namespace :api do
     get "/movies" => "movies#index"
     get "/movies/:id" => "movies#show"
